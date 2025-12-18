@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO -->
-    <meta name="description"
-        content="Tran Van Nhan is a Software Engineering student passionate about web development and modern UI design." />
+    <meta name="description" content="Hi, my name is Tran Van Nhan. I'm a Software Engineering Student." />
     <meta name="keywords" content="Tran Van Nhan, portfolio, software engineering, web developer, student" />
     <meta name="author" content="Tran Van Nhan" />
     <meta name="robots" content="index, follow" />
@@ -17,8 +16,8 @@
 
     <!-- Open Graph / Facebook / Zalo -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Tran Van Nhan | Student Portfolio" />
-    <meta property="og:description" content="Software Engineering student portfolio website." />
+    <meta property="og:title" content="Tran Van Nhan | My Site" />
+    <meta property="og:description" content="Hi, my name is Tran Van Nhan. I'm a Software Engineering Student." />
     <meta property="og:url" content="https://trvannhan.github.io/" />
     <meta property="og:image" content="https://trvannhan.github.io/og-image.png" />
     <meta property="og:image:width" content="1200" />
@@ -27,8 +26,16 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tran Van Nhan | Student Portfolio" />
-    <meta name="twitter:description" content="Software Engineering student portfolio website." />
+    <meta name="twitter:description" content="Hi, my name is Tran Van Nhan. I'm a Software Engineering Student." />
     <meta name="twitter:image" content="https://trvannhan.github.io/og-image.png" />
+    <meta property="twitter:url" content="https://trvannhan.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <style>
         /* Trạng thái ban đầu: ẩn và đẩy xuống một chút */
@@ -194,23 +201,23 @@
     <!-- footer ./ -->
 
     <script>
-    const observerOptions = {
-        threshold: 0.1 // Khi 10% phần tử xuất hiện thì kích hoạt
-    };
+        const observerOptions = {
+            threshold: 0.1 // Khi 10% phần tử xuất hiện thì kích hoạt
+        };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, observerOptions);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
 
-    // Chọn tất cả các phần tử muốn tạo hiệu ứng
-    const animatedElements = document.querySelectorAll('.banner-text, .banner-cta, .section-title, .section-content, .flex.justify-center');
-    
-    animatedElements.forEach(el => observer.observe(el));
-</script>
+        // Chọn tất cả các phần tử muốn tạo hiệu ứng
+        const animatedElements = document.querySelectorAll('.banner-text, .banner-cta, .section-title, .section-content, .flex.justify-center');
+
+        animatedElements.forEach(el => observer.observe(el));
+    </script>
 
 </body>
 
