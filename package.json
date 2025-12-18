@@ -14,7 +14,7 @@
   "author": "",
   "type": "module",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
@@ -26,5 +26,8 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.0"
+  },
+  "dependencies": {
+    "scrollreveal": "^4.0.9"
   }
 }

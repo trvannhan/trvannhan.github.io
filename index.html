@@ -1,42 +1,217 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <title>My Site</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <style>
-    body,
-    h1 {
-      font-family: "Raleway", sans-serif
-    }
+    <!-- Basic -->
+    <meta charset="UTF-8" />
+    <title>Tran Van Nhan | Software Engineering Student</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    body,
-    html {
-      height: 100%
-    }
+    <!-- SEO -->
+    <meta name="description"
+        content="Tran Van Nhan is a Software Engineering student passionate about web development and modern UI design." />
+    <meta name="keywords" content="Tran Van Nhan, portfolio, software engineering, web developer, student" />
+    <meta name="author" content="Tran Van Nhan" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
 
-    .bgimg {
-      background-image: url('https://images.unsplash.com/photo-1761872789483-13f597d18b76?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMzN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&q=60&w=600');
-      min-height: 100%;
-      background-position: center;
-      background-size: cover;
-    }
-  </style>
+    <!-- Open Graph / Facebook / Zalo -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tran Van Nhan | Student Portfolio" />
+    <meta property="og:description" content="Software Engineering student portfolio website." />
+    <meta property="og:url" content="https://trvannhan.github.io/" />
+    <meta property="og:image" content="https://trvannhan.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tran Van Nhan | Student Portfolio" />
+    <meta name="twitter:description" content="Software Engineering student portfolio website." />
+    <meta name="twitter:image" content="https://trvannhan.github.io/og-image.png" />
+
+    <style>
+        /* Trạng thái ban đầu: ẩn và đẩy xuống một chút */
+        .banner-text,
+        .banner-cta,
+        .section-title,
+        .section-content,
+        .flex.justify-center {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        /* Khi có class 'active' sẽ hiện lên và trả về vị trí cũ */
+        .active {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-    <div class="w3-display-topleft w3-padding-large w3-xlarge">
-      VanNhan
-    </div>
-    <div class="w3-display-middle">
-      <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-      <hr class="w3-border-gray" style="margin:auto;width:80%">
-      <p class ="w3-large w3-center">10 days Left</p>
-    </div>
-  </div>
+
+    <main>
+        <!-- banner -->
+        <section
+            class="min-h-screen w-full flex flex-col justify-center items-center bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c')] bg-cover bg-center">
+            <div class="w-full lg:w-[80%] p-12 text-gray-900 bg-white/70 backdrop-blur rounded-xl">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-10 grid gap-3">
+                    <span class="banner-text">
+                        Hi, my name is <span class="text-indigo-500">Tran Van Nhan</span>
+                    </span>
+
+                    <span class="banner-text">
+                        I'm a Software Engineering Student.
+                    </span>
+                </h1>
+
+                <a href="#about-me"
+                    class="banner-cta uppercase border-2 border-indigo-500 px-10 py-4 hover:bg-indigo-500 hover:text-white transition rounded-lg">
+                    Know more
+                </a>
+            </div>
+        </section>
+        <!-- banner ./ -->
+
+        <!-- about me -->
+        <section id="about-me"
+            class="bg-teal-500 min-h-screen w-full flex flex-col justify-center items-center px-6 py-16 text-white">
+
+            <div class="max-w-6xl w-full">
+
+                <h2 class="section-title uppercase text-3xl md:text-5xl text-center font-bold mb-16">
+                    About Me
+                </h2>
+
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                    <!-- Avatar -->
+                    <div class="flex justify-center">
+                        <div
+                            class="relative w-72 aspect-square rounded-2xl overflow-hidden shadow-2xl border border-white/30 bg-white">
+                            <img src="imgs/avatar.png" alt="Tran Van Nhan Avatar" class="w-full h-full object-cover" />
+
+                            <div
+                                class="absolute bottom-3 right-3 bg-white text-indigo-500 px-4 py-1 rounded-full text-sm font-semibold shadow">
+                                Student
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Content -->
+                    <div class="section-content space-y-6 text-lg font-light leading-relaxed text-center md:text-left">
+
+
+                        <p>
+                            My name is <span class="font-semibold">Tran Van Nhan</span>,
+                            a Software Engineering student with a strong interest in web development
+                            and modern user interfaces.
+                        </p>
+
+                        <p>
+                            I enjoy working with HTML, CSS, JavaScript and Tailwind CSS to build
+                            clean, responsive and user-friendly websites.
+                        </p>
+
+                        <!-- Highlight box -->
+                        <div
+                            class="section-content bg-white/20 backdrop-blur rounded-xl p-6 grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="font-semibold">🎯 Focus</p>
+                                <p>Frontend Development</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">🛠 Skills</p>
+                                <p>HTML · CSS · JS · Tailwind</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">📚 Major</p>
+                                <p>Software Engineering</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">🚀 Goal</p>
+                                <p>Become Web Developer</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about me ./ -->
+
+        <!-- contact -->
+        <section id="contact"
+            class="bg-white min-h-[500px] w-full flex flex-col justify-center items-center p-6 lg:p-12 text-gray-800">
+            <div class="w-full lg:w-[60%] mb-8">
+                <h2 class="section-title uppercase text-3xl lg:text-5xl text-center font-bold mb-6">
+                    Contact
+                </h2>
+                <p class="section-content text-center text-lg">
+                    I am always open to learning opportunities, teamwork, and new challenges.
+                </p>
+            </div>
+
+            <a href="mailto:nhantra001@gmail.com"
+                class="border-2 border-indigo-500 px-10 py-4 bg-emerald-500 text-white hover:bg-white hover:text-indigo-500 transition rounded-lg">
+                Send Me An Email
+            </a>
+        </section>
+        <!-- contact ./ -->
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-gradient-to-b from-neutral-800 to-neutral-950 py-20 flex flex-col items-center">
+
+        <!-- social icons -->
+        <div class="flex gap-10 mb-10">
+
+            <a href="https://www.linkedin.com/in/vannhanvnuk/" target="_blank" class="hover:-translate-y-1 transition">
+                <img src="/imgs/linkedin.svg" alt="LinkedIn" class="w-10 opacity-70 hover:opacity-100 transition" />
+            </a>
+
+            <a href="https://github.com/trvannhan" target="_blank" class="hover:-translate-y-1 transition">
+                <img src="/imgs/github.svg" alt="GitHub" class="w-10 opacity-70 hover:opacity-100 transition" />
+            </a>
+
+        </div>
+
+        <!-- divider -->
+        <div class="w-72 h-px bg-white/30 mb-6"></div>
+
+        <!-- copyright -->
+        <p class="text-sm text-blue-300">
+            © 2025 – Tran Van Nhan
+        </p>
+    </footer>
+    <!-- footer ./ -->
+
+    <script>
+    const observerOptions = {
+        threshold: 0.1 // Khi 10% phần tử xuất hiện thì kích hoạt
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    // Chọn tất cả các phần tử muốn tạo hiệu ứng
+    const animatedElements = document.querySelectorAll('.banner-text, .banner-cta, .section-title, .section-content, .flex.justify-center');
+    
+    animatedElements.forEach(el => observer.observe(el));
+</script>
+
 </body>
+
 </html>
